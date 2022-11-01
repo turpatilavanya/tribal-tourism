@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Chat Support
+    </title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,300;1,400;1,500;1,600;1,700;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,700&family=Ubuntu:ital,wght@1,400;1,700&display=swap');
+
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+        }
+        .content{
+            display: flex;           
+        }
+        .content .left{
+            flex:0 0 50%;
+        }
+        @media (min-width:870px){
+            .content .right{
+                height: 100vh;
+            }
+        }
+        .content .right{
+            flex:0 0 50%;
+            justify-content: center;
+            background-color: crimson;
+            align-items: center;
+
+        }
+        .right-content{
+            margin: auto;
+            text-align: center;
+            margin-top: 35px;
+            align-items: center;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        }
+        iframe{
+            border: 4px solid black;
+            border-radius: 8px;
+            min-width: 400px;
+             width: 80%;
+              min-height: 85vh;
+        }
+        /* left section styling */
+        .left{
+            box-sizing: border-box;
+            padding: 35px 35px;
+            text-align: center;
+            margin: auto;
+        }
+        .left .image img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid crimson;
+            object-fit: cover;
+            padding: 10px;
+        }
+        .left .left-content{
+            font-size: 23px;
+            margin-top: 10px;
+            font-family: "Ubuntu",sans-serif;
+            font-weight: 700;
+            position: relative;
+        }
+        .left .left-content::after{
+            bottom: -10px;
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 5px;
+            background: crimson;
+            left: 0;
+        }
+        .heading{
+            padding: 10px 25px;
+            position: fixed;
+            color: crimson;
+            font-size: 18px;
+            font-family: " Poppins",sans-serif;
+            transition: all 0.7s ease;
+            cursor: pointer;
+            background: #fff;
+            width: 40%;
+            z-index: 100;
+            top: 0;
+        }
+        .heading h1{
+            transition: all 0.7s ease;
+
+        }
+        .heading h1:hover{
+            transform: scale(1.025);
+        }
+        .heading a{
+            color: crimson;
+        }
+        @media (max-width:870px){
+           .content{
+               display: block;
+               margin-top: -129px;
+           }
+           .content .right{
+               padding: 0;
+           }
+           .content .left{
+               margin-top: 180px;
+           }
+           .left .image img{
+            width: 80px;
+            height: 80px;
+           
+        }
+        .left{
+            margin: auto;
+        }
+        .left .left-content{
+            text-align: center;
+            margin: auto;
+        }
+        .left .left-content::after{
+            bottom: -10px;
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 5px;
+            background: crimson;
+            left: 0;
+        }
+        .heading{
+            margin: auto;
+            position: fixed;
+            color: crimson;
+            font-size: 18px;
+            font-family: " Poppins",sans-serif;
+            transition: all 0.7s ease;
+            cursor: pointer;
+            background: #fff;
+            width: 100%;
+            z-index: 100;
+        }
+        .right-content{
+            padding: 15px 0;
+        }
+        }
+
+        @media (max-width:420px){
+            element.style {
+        min-width: 300px;
+        min-height: 65vh;
+
+        
+    }
+    
+    iframe{
+        min-width: 250px;
+        min-height: 50vh;
+
+        margin: auto;
+    }
+    .right{
+        min-height: 40vh;
+        margin: auto;
+    }
+
+        }
+        @media (max-width:280px){
+            
+    
+    iframe{
+        min-width: 150px;
+        min-height: 50vh;
+
+        margin: auto;
+    }
+    .right{
+        min-height: 40vh;
+        margin: auto;
+    }
+
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <H1><a href="/index.html">Trazel</a></H1>
+    </div>
+    <div class="content">
+        <div class="left">
+            <div class="image">
+                <img src="/chat-support.jpg" alt="">
+            </div>
+            <div class="left-content">
+                <h3>Chat with US and find Sutaible Place to visit
+                    <br>Type Hy to start Conversation
+                </h3>
+            </div>
+        </div>
+        <div class="right">
+           <div class="right-content">
+            <iframe src='https://webchat.botframework.com/embed/myservicebot-bot?s=wNzE7WiaXck.586G4fsnmqVJ3vauv0HTHDFy0rMAvklHWgb6sh6EFCs'  ></iframe>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
